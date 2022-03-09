@@ -1,0 +1,476 @@
+openapi: 3.0.0
+info:
+  title: typescript-start
+  description: nodejs server
+  version: 1.0.0
+servers:
+  - url: localhost/api
+    description: Localhost Url
+    port:
+      enum:
+        - "3001"
+paths:
+  /:
+    get:
+      summary: Basic path
+      description: home directory
+      responses:
+        "200":
+          description: empty
+          content:
+            application/json:
+              schema:
+                type: object
+/user:
+  get:
+    summary: Returns a user by ID
+      description: get user by id
+      responses:
+        "200":
+          description: A JSON obj of user
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/User'
+        "404":
+          description: Can`t find user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "500":
+          description: internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  patch:
+    summary: Patch user
+    requestBody:
+      description: requestBody for patch user
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UserRequest'
+    responses:
+      200:
+        description: "User was updated successfully"
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/LoginResponse'
+      404:
+        description: "Cannot find User"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+      500:
+        description: "internal server error"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+
+/user/login:
+  post:
+    summary: User login
+    requestBody:
+      description: requestBody for login
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/LoginReq'
+    responses:
+      201:
+        description: "successful operation"
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/LoginResponse'
+      400:
+        description: "enter password and email"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+      404:
+        description: "Not Found"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+      500:
+        description: "internal server error"
+        content:
+          application/json:
+           schema:
+              $ref: '#/components/schemas/Error'
+              
+/user/register:
+   post:
+    summary: User register
+    requestBody:
+      description: requestBody for registration
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RegReq'
+
+    responses:
+      201:
+        description: "User has been created"
+      400:
+        description: "Enter password and email"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+      500:
+        description: "internal server error"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+              
+/communal:
+  patch:
+    summary: Update communal
+      requestBody:
+        description: requestBody for updating communal
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CommunalRes'
+      responses:
+        200:
+          description: "Communal was updated successfully"
+        500:
+          description: "internal server error"
+          content:
+            application/json:
+            schema:
+                $ref: '#/components/schemas/Error'
+  post:
+    summary: Create communal
+      requestBody:
+        description: requestBody for communal
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CommunalReq'
+      responses:
+        201:
+          description: "Communal has been created"
+        500:
+          description: "internal server error"
+          content:
+            application/json:
+            schema:
+                $ref: '#/components/schemas/Error'
+  get: 
+    summary: Returns a communal by user's id
+    responses:
+      "200":
+        description: found all communal by user
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/CommunalRes'
+      "404":
+        description: Can`t find user
+/category:
+  post:
+    summary: Create new category
+    requestBody:
+      description: requestBody for creating category
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CreateCategoryReq'
+
+    responses:
+      201:
+        description: "Category has been created"
+      500:
+        description: "internal server error"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+
+  get:
+    summary: Returns categories by user`s id
+    responses:
+      200:
+        description: Category has been received
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/GetCategoryRes'
+      500:
+        description: internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+
+  delete:
+    summary: Delete all categories by user`s id
+    responses:
+      200:
+        description: All categories has been deleted successfully
+      500:
+        description: internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+  
+  delete/{id}:
+    summary: Delete category by id
+    parameters:
+        - name: id
+          in: path
+          required: true
+          description: id of category.
+          schema:
+            type : string 
+    responses:
+      200:
+        description: Category was deleted successfully!
+      404:
+        description: Category wasn't found
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+      500:
+        description: internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+
+/history: 
+  post:
+    summary: Create new history
+    requestBody:
+      description: requestBody for creating history
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HistoryReq'
+    responses:
+      201:
+        description: "History has been created"
+      500:
+        description: "internal server error"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+    
+  get:
+    summary: Returns histories by user`s id
+    responses:
+      200:
+        description: Found histories by user's ii
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/HistoryRes'
+      500:
+        description: internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+  
+  delete/{id}:
+    summary:
+    parameters:
+        - name: id
+          in: path
+          required: true
+          description: id of history.
+          schema:
+            type : string
+    responses:
+      200:
+        description: History was deleted successfully!
+      404:
+        description: History wasn't found
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+      500:
+        description: internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+  
+  delete:
+    summary: Delete all history by user`s id
+    responses:
+      200:
+        description: Histories were deleted successfully!
+      500:
+        description: internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+        - code
+        - message
+    User:
+      type: object
+        properties:
+          id:
+             type: string
+          first_name:
+             type: string
+          last_name:
+             type: string
+          email:
+             type: string
+          avatar:
+             type: string
+          budget_amount:
+             type: numeric
+    UserRequest:
+      type: object
+        properties:
+          id:
+             type: string
+          firstName:
+             type: string
+          lastName:
+             type: string
+          email:
+             type: string
+          avatar:
+             type: string
+          budgetAmount:
+             type: numeric
+    LoginReq:
+      type: object
+        properties:
+          email:
+            type: string
+          password:
+            type: string
+    RegReq:
+      type: object
+        properties:
+          firstName:
+             type: string
+          lastName:
+             type: string
+          email:
+             type: string
+          password:
+            type: string
+    LoginResponse:
+      type: object
+        properties:
+          token:
+            type: string
+          user:
+            type: object
+            $ref: '#/components/schemas/User'
+    CommunalRes:
+     type: object
+        properties:
+          id:
+            type: string
+          timestamp:
+            type: string
+          bills:
+            type: array
+            items:
+              type: object
+          total:
+            type: numeric
+          user_id:
+            type: string
+    CommunalReq:
+      type: object
+        properties:
+          timestamp:
+            type: string
+          bills:
+            type: array
+            items:
+              type: object
+          total:
+            type: numeric
+    CreateCategoryReq:
+      type: object
+        properties:
+          title:
+            type: string
+          description:
+            type: string
+          isDefault:
+            type: boolean
+    GetCategoryRes:
+      type: object
+        properties:
+          title:
+            type: string
+          description:
+            type: string
+          isDefault:
+            type: boolean
+          id:
+            type: string
+    HistoryRes:
+      type: object
+        properties:
+           id:
+            type: string
+          type:
+            type: string
+          amount:
+            type: integer
+          user_id:
+            type: string
+          category_id:
+            type: string
+    HistoryReq:
+     type: object
+        properties:
+          type:
+            type: string
+          amount:
+            type: integer
+          category_id:
+            type: string
+            

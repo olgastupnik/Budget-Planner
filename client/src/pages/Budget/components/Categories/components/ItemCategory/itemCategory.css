@@ -1,0 +1,37 @@
+.itemCategory {
+  width: 115px;
+  margin: 10px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  position: relative;
+}
+
+.itemCategory h3 {
+  margin: 5px;
+  text-align: center;
+}
+
+.itemCategory span {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.progressBox {
+  margin: 25px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.progressBox progress {
+  width: 100px;
+}
+
+.itemCategory .removeBtn {
+  position: absolute;
+  right: -7px;
+  top: -4px;
+}

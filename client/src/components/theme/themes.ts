@@ -1,0 +1,33 @@
+export const lightTheme = {
+  body: '#eff0f3',
+  text: '#363537',
+  toggleBorder: '#FFF',
+  background: '#eff0f3',
+  boxBackground: 'white',
+  itemCategory: 'white',
+  btnHistory: '#2a3368',
+  modal: '#eeebee',
+  btnShadowHistory: '0 0 5px 0 rgb(0 0 0 / 20%)',
+  amountHistory: 'black',
+  asideGround: 'gray',
+  pink: '#9d80c499',
+  green: '#92df92',
+  modalText: 'black',
+};
+
+export const darkTheme = {
+  body: 'hsl(0, 0%, 18.82%)',
+  text: '#FAFAFA',
+  toggleBorder: '#6B8096',
+  boxBackground: '#343741',
+  itemCategory: 'blueviolet',
+  modal: '#dcdfe4',
+  background: 'linear-gradient(0deg,#414141 0,#373636);',
+  btnHistory: 'red',
+  btnShadowHistory: '4px 1px 8px 0px rgb(211 211 212 / 20%)',
+  amountHistory: 'black',
+  asideGround: 'darkslateblue',
+  pink: '#ff80ab',
+  green: '#4caf50',
+  modalText: 'antiquewhite',
+};

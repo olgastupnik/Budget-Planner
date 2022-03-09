@@ -1,0 +1,43 @@
+.loginBox h1 {
+  color: #161e2d;
+}
+
+form.login {
+  height: 230px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px;
+  margin: 10px;
+}
+
+.loginBox {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginBox span {
+  color: gray;
+  font-weight: 500;
+}
+
+.loginBox button {
+  background-color: #161e2d;
+  margin: 25px 0;
+}
+
+.loginBox button span {
+  color: white;
+}
+
+.loginBox a {
+  margin-top: 20px;
+  border-bottom: 1px #161e2d solid;
+  color: #161e2d;
+}

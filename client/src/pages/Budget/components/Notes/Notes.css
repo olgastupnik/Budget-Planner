@@ -1,0 +1,148 @@
+.add {
+  width: 58%;
+  height: 37%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: white;
+}
+
+.add div:first-child {
+  height: 90%;
+}
+
+.add h2:first-child {
+  font-size: 15px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 21px;
+  margin-bottom: 10px;
+}
+
+.add .textFieldBox {
+  margin-left: 4px;
+}
+
+.add span {
+  padding-right: 10px;
+}
+
+.add h3 {
+  font-size: 11px;
+  padding-right: 10px;
+  display: inline;
+}
+.add .labelBox h3 {
+  padding-right: 36px;
+}
+
+.add .box div button {
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.add .box div button:first-of-type {
+  margin-left: 20px;
+}
+
+.add .activeBtn {
+  background-color: yellowgreen;
+}
+
+.add .box > div:first-of-type {
+  padding-bottom: 10px;
+}
+
+.lastBtn {
+  border-radius: 5px;
+}
+
+.add form > div {
+  justify-content: flex-start;
+}
+
+.inputBox {
+  width: 170px;
+}
+
+.add form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.add input {
+  padding: 10px;
+}
+
+.labelBox {
+  padding: 0;
+}
+
+.boxCategory {
+  background: white;
+  border-radius: 5px;
+  width: 172px;
+  padding: 10px;
+  box-shadow: 0px 6px 4px -5px rgba(133, 133, 133, 0.3);
+}
+
+.custom-btn {
+  border: 2px solid #000;
+  border-radius: 3px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-4 {
+  position: relative;
+  color: #000;
+  z-index: 2;
+  padding: 5px !important;
+  padding: 0;
+}
+
+.btn-4:hover {
+  border: none;
+}
+
+.btn-4:before,
+.btn-4:after {
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 0%;
+  border: 2px solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.btn-4:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-radius: 3px;
+  border-top-color: #000;
+  border-left-color: #000;
+}
+
+.btn-4:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 3px;
+  border-bottom-color: #000;
+  border-right-color: #000;
+}
+
+.btn-4:hover:before,
+.btn-4:hover:after {
+  border-color: #000;
+  border-radius: 3px;
+  height: 100%;
+  width: 100%;
+}

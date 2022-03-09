@@ -1,0 +1,9 @@
+.myDataForm button {
+  margin: 15px;
+}
+
+.buttonBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

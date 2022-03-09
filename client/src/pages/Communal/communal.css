@@ -1,0 +1,39 @@
+.communal {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.formBox {
+  padding: 10px;
+  height: 520px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-right: 25px;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+  border-radius: 15px;
+}
+
+.chartBox {
+  padding: 10px;
+  height: 520px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+  border-radius: 15px;
+}
+
+.communal button {
+  background-color: #a9a9a9;
+  color: white;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+}

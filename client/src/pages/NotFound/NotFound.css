@@ -1,0 +1,40 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.notFound h1 {
+  margin: 0 auto;
+  color: #252f3e;
+  font-size: 100px;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+
+.notFound h3 {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.notFound p {
+  width: 455px;
+  margin: 0 auto;
+  padding: 25px;
+  font-weight: 300;
+}
+
+.notFound button {
+  border-radius: 8px;
+  width: 190px;
+  background: #252f3e;
+  color: #eff0f3;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.notFound button:hover {
+  background: #161e2d;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+}

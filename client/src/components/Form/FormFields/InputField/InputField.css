@@ -1,0 +1,19 @@
+.textFieldBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.textFieldWidth {
+  width: 100%;
+  background: whitesmoke;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+}
+
+label {
+  color: #161e2d;
+  font-weight: 300;
+  margin: 5px 0 7px;
+}

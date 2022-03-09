@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "commonComponents": [ "src/components/index.ts" ],
+            "assets/*": [ "src/assets/*" ],
+            "helpers": ["src/helpers/index.ts"],
+            "pages": ["src/pages/index.ts"],
+            "routes": ["src/routes/index.ts"],
+            "services": ["src/services/Fetcher.ts"],
+            "store": ["src/store/index.ts"],
+            "types": ["src/types/index.ts"]
+         }
+    }
+}
+

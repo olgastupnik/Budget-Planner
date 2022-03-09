@@ -1,0 +1,57 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["airbnb", "eslint:recommended", "plugin:react/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "@typescript-eslint"],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "arrow-body-style": 0,
+    "object-curly-newline": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": [
+      0,
+      {
+        "html": "ignore",
+        "custom": "ignore",
+        "explicitSpread": "ignore"
+      }
+    ],
+    "operator-linebreak": 0,
+    "no-debugger": "off",
+    "import/extensions": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "no-use-before-define": 0,
+    "no-console": "error",
+    "import/no-extraneous-dependencies": 0,
+    "no-undef": 0,
+    "react/react-in-jsx-scope": 0,
+    "no-nested-ternary": 0,
+    "no-unused-vars": "off",
+    "implicit-arrow-linebreak": "off",
+    "max-len": 0,
+    "linebreak-style": 0,
+    "react/jsx-key": 0,
+    "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "no-unused-expressions": "off",
+    "array-callback-return": "off",
+    "no-return-assign": "off",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "jsx-a11y/label-has-associated-control": ["error", { "allow": ["_id"] }],
+    "no-confusing-arrow": "off",
+    "react/jsx-curly-newline": "off",
+    "camelcase": "off",
+    "import/no-unresolved": 0
+  }
+}

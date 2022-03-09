@@ -1,0 +1,84 @@
+.account {
+  width: 40%;
+  height: 37%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: white;
+}
+
+.account .box > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+.account h2 {
+  font-size: 15px;
+}
+
+.account .box button:first-child {
+  margin-right: 10px;
+}
+
+.account .box button {
+  padding: 5px 4px;
+  font-size: small;
+}
+
+.account h3 {
+  text-align: center;
+  font-size: 11px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex > button {
+  padding: 2px 4px;
+  border: none;
+  background: none;
+}
+
+.d-flex > button:hover {
+  color: #9d80c499;
+}
+
+.account progress {
+  width: 95%;
+  padding: 10px;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #e1e4e8;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #ea4aaa 17%, #b34bff 34%, #01feff 51%, #ea4aaa 85%, #b34bff);
+  background-size: 300% 100%;
+  animation: progress-animation 2s linear infinite;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+@keyframes progress-animation {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0;
+  }
+}

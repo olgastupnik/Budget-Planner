@@ -1,0 +1,25 @@
+{
+    "testUser": {   
+      "firstName":"Olga",
+      "lastName": "Stupnik",
+      "email":  "user@gmail.com",
+      "password": "que123",
+      "role": "user"
+  },
+  "testAdmin": {   
+    "firstName":"Olga",
+    "lastName": "Stupnik",
+    "password": "que123",
+    "email":  "admin@gmail.com",
+    "role": "admin"
+}
+  ,
+    "patchUser": {
+      "id": "d2761732-4a53-4569-886a-f5ad79ebf6c4",
+      "firstName": "firstName",
+      "lastName": "lastName",
+      "email":"user@gmail.com",
+      "budgetAmount": "555"
+    }
+
+  }

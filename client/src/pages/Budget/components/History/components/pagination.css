@@ -1,0 +1,13 @@
+.btnBox {
+  display: flex;
+  justify-content: center;
+}
+.btnBox > button {
+  border-radius: 5px;
+  background: none;
+  padding: 4px 9px;
+}
+
+.activeBtn {
+  background: #e2e1e5 !important;
+}

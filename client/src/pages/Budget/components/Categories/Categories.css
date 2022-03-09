@@ -1,0 +1,53 @@
+.categories {
+  width: 100%;
+  border-radius: 5px;
+  height: 58%;
+  margin-top: 10px;
+  background: white;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+}
+
+.categories .box div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+.categories h2 {
+  font-size: 15px;
+}
+
+.categories button {
+  padding: 5px 8px;
+  border: none;
+  background: none;
+}
+
+.categories button:hover {
+  color: #9d80c499;
+}
+
+.categories button:nth-child(2) {
+  margin-left: 10px;
+}
+
+.categories ul {
+  justify-content: left;
+  margin-left: 35px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.categories ul > li {
+  align-items: stretch;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.categories form {
+  display: flex;
+}

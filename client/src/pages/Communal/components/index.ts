@@ -1,0 +1,1 @@
+export { CommunalItem } from './CommunalItem';

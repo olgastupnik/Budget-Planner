@@ -1,0 +1,1 @@
+export { communalSchema } from "./communal";

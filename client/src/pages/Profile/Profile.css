@@ -1,0 +1,21 @@
+.profileBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
+.formBox {
+  padding: 10px;
+  height: 430px;
+  width: 4300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+  border-radius: 15px;
+}

@@ -1,0 +1,23 @@
+.communalItem {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin: 10px;
+  box-shadow: 7px 5px 8px -5px rgb(34 60 80 / 20%);
+}
+
+.communalItem > div {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  justify-content: flex-end;
+}
+
+.communalItem .textFieldWidth {
+  width: 150px;
+  margin: 0 15px;
+}
+
+.communalItem h3 {
+  width: 200px;
+}

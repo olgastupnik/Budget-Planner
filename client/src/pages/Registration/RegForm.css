@@ -1,0 +1,38 @@
+.regBox h1 {
+  color: #161e2d;
+}
+
+form.reg {
+  height: 420px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px;
+  margin: 10px;
+}
+
+.regBox {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.regBox button {
+  background-color: #161e2d;
+  margin: 12px 0 32px;
+}
+
+.regBox button span {
+  color: white;
+}
+
+.regBox a {
+  border-bottom: 1px #161e2d solid;
+  color: #161e2d;
+  font-weight: bolder;
+}

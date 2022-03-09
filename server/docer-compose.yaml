@@ -1,0 +1,24 @@
+version: "3.9"
+networks:
+  lan:
+services:
+  postgres14:
+    image: postgres:14-alpine
+    ports:
+      - "5432:5432"
+    expose:
+      - 5432
+    container_name: postgres-14
+    environment:
+      POSTGRES_PASSWORD: 'que123'
+    volumes:
+      - ~/databases/backproject/postgres14:/data
+  nodeapp_contaner:
+    build: .
+    image: nodeapp:latest
+    container_name: nodeapp_cont_name
+    ports:
+      - "5000:4000"
+    links:
+      - postgres14
+
